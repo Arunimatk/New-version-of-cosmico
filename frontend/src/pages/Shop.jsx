@@ -56,7 +56,7 @@ const Shop = () => {
                 const response = await api.get('products/');
                 let data = response.data;
                 if (category) {
-                    data = data.filter(p => p.category_name.toLowerCase() === category.toLowerCase());
+                    data = data.filter(p => p.category_name && p.category_name.toLowerCase() === category.toLowerCase());
                 }
                 console.log("Shop Data:", data); // Debugging
                 setProducts(data);
@@ -81,9 +81,9 @@ const Shop = () => {
                     {products.map(product => (
                         <div key={product.id} className="group flex flex-col h-full bg-white bg-opacity-50 glass-card transition-all duration-300 hover:shadow-xl">
                             <div className="relative overflow-hidden h-80 bg-gray-100">
-                                {/* Fix: Prepend backend URL if path is relative */}
+                                {/* Fix: Use reliable image URL logic */}
                                 <img
-                                    src={product.image ? (product.image.startsWith('http') ? product.image : `http://127.0.0.1:8000${product.image}`) : "https://placehold.co/400x600?text=Cosmico"}
+                                    src={product.image ? (product.image.startsWith('http') ? product.image : product.image) : "https://placehold.co/400x600?text=Cosmico"}
                                     alt={product.name}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
