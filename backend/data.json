@@ -1,87 +1,207 @@
 [
-{
-  "model": "api.category",
-  "pk": 1,
-  "fields": {
-    "name": "lipstick",
-    "slug": "lipstick",
-    "image": ""
+  {
+    "model": "api.category",
+    "pk": 1,
+    "fields": {
+      "name": "lipstick",
+      "slug": "lipstick",
+      "image": ""
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$qn18qblbBXBTuE9y6nAxco$1DYhwIepbRwQq5EdiGl2Slzj0bmuBQMQWWTJOiKDtLA=",
+      "last_login": "2026-01-06T05:57:13.254Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@cosmico.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-01-06T05:55:43.945Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$Lj4UhXUDSwJ2rhWznUg5C5$omu3//IiGh0hrKmIpWCaWRP7+CpMRkEXw1lYqj2nmXo=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "arunima",
+      "first_name": "",
+      "last_name": "",
+      "email": "arunima@example.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-01-06T05:55:50.515Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 5,
+    "fields": {
+      "name": "Ruby Red",
+      "slug": "ruby-red",
+      "description": "A classic bold red that adds instant confidence.\r\nPerfect for parties, weddings, and evening glam.",
+      "price": "290.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/chil.jpg",
+      "rating": 5.0,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:32:42.931276Z",
+      "shades": [
+        "Ruby Red"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 6,
+    "fields": {
+      "name": "Rose Pink",
+      "slug": "rose-pink",
+      "description": "A delicate pink with romantic charm.\r\nGives a youthful glow for daytime outings.",
+      "price": "250.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/lip.jpg",
+      "rating": 5.0,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:35:18.892387Z",
+      "shades": [
+        "Rose Pink"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 7,
+    "fields": {
+      "name": "Coral Crush",
+      "slug": "coral-crush",
+      "description": "A vibrant coral that brightens your smile.\r\nGreat for summer looks and casual brunches.",
+      "price": "300.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/Ruby_Desire.webp",
+      "rating": 4.9,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:37:14.848121Z",
+      "shades": [
+        "Coral Crush"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 8,
+    "fields": {
+      "name": "Mocha Brown",
+      "slug": "mocha-brown",
+      "description": "A warm brown with subtle depth.\r\nComplements dusky and medium skin tones beautifully.",
+      "price": "260.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/brownie.webp",
+      "rating": 4.9,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:38:55.473143Z",
+      "shades": [
+        "Mocha Brown"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 9,
+    "fields": {
+      "name": "Cream Orange",
+      "slug": "cream-orange",
+      "description": "A soft orange with creamy warmth.\r\nGives a fresh, bright look perfect for daytime wear.",
+      "price": "299.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/creem.jpg",
+      "rating": 4.5,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:40:26.365862Z",
+      "shades": [
+        "Cream Orange"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 10,
+    "fields": {
+      "name": "Blush Cream",
+      "slug": "blush-cream",
+      "description": "A delicate blush pink with warm undertones.\r\nPerfect for office makeup and casual outings.",
+      "price": "350.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/creemy.webp",
+      "rating": 5.0,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:42:01.800440Z",
+      "shades": [
+        "Blush Cream"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 11,
+    "fields": {
+      "name": "Cocoa Touch",
+      "slug": "cocoa-touch",
+      "description": "A warm brown with rich undertones.\r\nComplements all skin tones with effortless style.",
+      "price": "299.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/nude.jpg",
+      "rating": 4.6,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:44:03.100328Z",
+      "shades": [
+        "Cocoa Touch"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 12,
+    "fields": {
+      "name": "Bare Bliss",
+      "slug": "bare-bliss",
+      "description": "A soft nude shade that enhances natural beauty.\r\nPerfect for everyday elegance and minimal makeup.",
+      "price": "250.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/pinkyish.webp",
+      "rating": 4.7,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:45:34.188981Z",
+      "shades": [
+        "Bare Bliss"
+      ]
+    }
   }
-},
-{
-  "model": "api.product",
-  "pk": 1,
-  "fields": {
-    "name": "Ruby Rose",
-    "slug": "ruby-rose",
-    "description": "A bold deep red shade for a confident look.\r\nPerfect for parties and special occasions.",
-    "price": "300.00",
-    "category": 1,
-    "image": "products/Ruby_Desire_Pr8JO6T.webp",
-    "rating": 5.0,
-    "stock": 10,
-    "is_featured": true,
-    "is_trending": true,
-    "created_at": "2026-01-06T06:01:11.789Z",
-    "shades": [
-      "Ruby-Rose"
-    ]
-  }
-},
-{
-  "model": "api.product",
-  "pk": 3,
-  "fields": {
-    "name": "Berry-Plum",
-    "slug": "berry-plum-lipstick",
-    "description": "A rich berry-plum shade with a smooth texture.\r\nIdeal for evening and festive makeup looks.",
-    "price": "350.00",
-    "category": 1,
-    "image": "products/lip_ZySD22R.jpg",
-    "rating": 4.9,
-    "stock": 10,
-    "is_featured": true,
-    "is_trending": true,
-    "created_at": "2026-01-06T06:06:07.335Z",
-    "shades": [
-      "berry plum"
-    ]
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 1,
-  "fields": {
-    "password": "pbkdf2_sha256$1000000$qn18qblbBXBTuE9y6nAxco$1DYhwIepbRwQq5EdiGl2Slzj0bmuBQMQWWTJOiKDtLA=",
-    "last_login": "2026-01-06T05:57:13.254Z",
-    "is_superuser": true,
-    "username": "admin",
-    "first_name": "",
-    "last_name": "",
-    "email": "admin@cosmico.com",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2026-01-06T05:55:43.945Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 2,
-  "fields": {
-    "password": "pbkdf2_sha256$1000000$Lj4UhXUDSwJ2rhWznUg5C5$omu3//IiGh0hrKmIpWCaWRP7+CpMRkEXw1lYqj2nmXo=",
-    "last_login": null,
-    "is_superuser": true,
-    "username": "arunima",
-    "first_name": "",
-    "last_name": "",
-    "email": "arunima@example.com",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2026-01-06T05:55:50.515Z",
-    "groups": [],
-    "user_permissions": []
-  }
-}
 ]
