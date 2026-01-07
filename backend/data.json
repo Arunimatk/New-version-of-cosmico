@@ -1,0 +1,87 @@
+﻿[
+{
+  "model": "api.category",
+  "pk": 1,
+  "fields": {
+    "name": "lipstick",
+    "slug": "lipstick",
+    "image": ""
+  }
+},
+{
+  "model": "api.product",
+  "pk": 1,
+  "fields": {
+    "name": "Ruby Rose",
+    "slug": "ruby-rose",
+    "description": "A bold deep red shade for a confident look.\r\nPerfect for parties and special occasions.",
+    "price": "300.00",
+    "category": 1,
+    "image": "products/Ruby_Desire_Pr8JO6T.webp",
+    "rating": 5.0,
+    "stock": 10,
+    "is_featured": true,
+    "is_trending": true,
+    "created_at": "2026-01-06T06:01:11.789Z",
+    "shades": [
+      "Ruby-Rose"
+    ]
+  }
+},
+{
+  "model": "api.product",
+  "pk": 3,
+  "fields": {
+    "name": "Berry-Plum",
+    "slug": "berry-plum-lipstick",
+    "description": "A rich berry-plum shade with a smooth texture.\r\nIdeal for evening and festive makeup looks.",
+    "price": "350.00",
+    "category": 1,
+    "image": "products/lip_ZySD22R.jpg",
+    "rating": 4.9,
+    "stock": 10,
+    "is_featured": true,
+    "is_trending": true,
+    "created_at": "2026-01-06T06:06:07.335Z",
+    "shades": [
+      "berry plum"
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$qn18qblbBXBTuE9y6nAxco$1DYhwIepbRwQq5EdiGl2Slzj0bmuBQMQWWTJOiKDtLA=",
+    "last_login": "2026-01-06T05:57:13.254Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@cosmico.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-01-06T05:55:43.945Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$Lj4UhXUDSwJ2rhWznUg5C5$omu3//IiGh0hrKmIpWCaWRP7+CpMRkEXw1lYqj2nmXo=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "arunima",
+    "first_name": "",
+    "last_name": "",
+    "email": "arunima@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-01-06T05:55:50.515Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
