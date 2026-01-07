@@ -29,6 +29,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*'] # In production, Render handles this, but sticking to * for simplicity in this specific guide context unless user asks for strictness.
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.onrender.com',
+    'https://cosmico-backend-arun.onrender.com'
+]
+
 
 
 # Application definition
