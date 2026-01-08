@@ -9,6 +9,15 @@
     }
   },
   {
+    "model": "api.category",
+    "pk": 2,
+    "fields": {
+      "name": "blush",
+      "slug": "blush",
+      "image": ""
+    }
+  },
+  {
     "model": "api.product",
     "pk": 1,
     "fields": {
@@ -157,7 +166,7 @@
       "description": "A delicate blush pink with warm undertones.\r\nPerfect for office makeup and casual outings.",
       "price": "350.00",
       "category": 1,
-      "image": "products/creemy.webp",
+      "image": "products/pinkyish_BHh5FJ6.webp",
       "rating": 5.0,
       "stock": 10,
       "is_featured": true,
@@ -176,8 +185,8 @@
       "slug": "cocoa-touch",
       "description": "A warm brown with rich undertones.\r\nComplements all skin tones with effortless style.",
       "price": "299.00",
-      "category": 1,
-      "image": "products/nude.jpg",
+      "category": 2,
+      "image": "products/blush4_6JEQ6jP.webp",
       "rating": 4.6,
       "stock": 10,
       "is_featured": true,
@@ -192,19 +201,59 @@
     "model": "api.product",
     "pk": 12,
     "fields": {
-      "name": "Bare Bliss",
-      "slug": "bare-bliss",
+      "name": "Pink",
+      "slug": "pink",
       "description": "A soft nude shade that enhances natural beauty.\r\nPerfect for everyday elegance and minimal makeup.",
       "price": "250.00",
-      "category": 1,
-      "image": "products/pinkyish.webp",
+      "category": 2,
+      "image": "products/nudei.jpg",
       "rating": 4.7,
       "stock": 10,
       "is_featured": true,
       "is_trending": true,
       "created_at": "2026-01-07T16:45:34.188Z",
       "shades": [
-        "Bare Bliss"
+        "Pink"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 13,
+    "fields": {
+      "name": "Brown",
+      "slug": "brown",
+      "description": "A warm, earthy shade that gives a natural, sculpted look. Perfect for everyday wear and deeper skin tones.",
+      "price": "200.00",
+      "category": 2,
+      "image": "products/blush1.jpg",
+      "rating": 4.5,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-08T06:17:42.922Z",
+      "shades": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 14,
+    "fields": {
+      "name": "Rosy Petal",
+      "slug": "rosy-petal",
+      "description": "A gentle pink blush that brightens the face naturally. Creates a fresh and radiant look.",
+      "price": "240.00",
+      "category": 2,
+      "image": "products/rose_o9rIg2d.jfif",
+      "rating": 5.0,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-08T06:20:08.057Z",
+      "shades": [
+        "Rosy Petal"
       ]
     }
   },
