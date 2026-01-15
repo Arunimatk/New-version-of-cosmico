@@ -1,0 +1,242 @@
+[
+  {
+    "model": "api.product",
+    "pk": 1,
+    "fields": {
+      "name": "Ruby Rose",
+      "slug": "ruby-rose",
+      "description": "A bold deep red shade for a confident look.\r\nPerfect for parties and special occasions.",
+      "price": "300.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/Ruby_Desire_Pr8JO6T.webp",
+      "rating": 5.0,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-06T06:01:11.789000Z",
+      "shades": [
+        "Ruby-Rose"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 3,
+    "fields": {
+      "name": "Berry-Plum",
+      "slug": "berry-plum-lipstick",
+      "description": "A rich berry-plum shade with a smooth texture.\r\nIdeal for evening and festive makeup looks.",
+      "price": "350.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/lip_ZySD22R.jpg",
+      "rating": 4.9,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-06T06:06:07.335000Z",
+      "shades": [
+        "berry plum"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 5,
+    "fields": {
+      "name": "Ruby Red",
+      "slug": "ruby-red",
+      "description": "A classic bold red that adds instant confidence.\r\nPerfect for parties, weddings, and evening glam.",
+      "price": "290.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/chil_qCOtpMS.jpg",
+      "rating": 5.0,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:32:42.931000Z",
+      "shades": [
+        "Ruby Red"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 6,
+    "fields": {
+      "name": "Rose Pink",
+      "slug": "rose-pink",
+      "description": "A delicate pink with romantic charm.\r\nGives a youthful glow for daytime outings.",
+      "price": "250.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/creemy.webp",
+      "rating": 5.0,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:35:18.892000Z",
+      "shades": [
+        "Rose Pink"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 7,
+    "fields": {
+      "name": "Coral Crush",
+      "slug": "coral-crush",
+      "description": "A vibrant coral that brightens your smile.\r\nGreat for summer looks and casual brunches.",
+      "price": "300.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/nude.jpg",
+      "rating": 4.9,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:37:14.848000Z",
+      "shades": [
+        "Coral Crush"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 8,
+    "fields": {
+      "name": "Mocha Brown",
+      "slug": "mocha-brown",
+      "description": "A warm brown with subtle depth.\r\nComplements dusky and medium skin tones beautifully.",
+      "price": "260.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/brownie_sS4fQe8.webp",
+      "rating": 4.9,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:38:55.473000Z",
+      "shades": [
+        "Mocha Brown"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 9,
+    "fields": {
+      "name": "Cream Orange",
+      "slug": "cream-orange",
+      "description": "A soft orange with creamy warmth.\r\nGives a fresh, bright look perfect for daytime wear.",
+      "price": "299.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/creem.jpg",
+      "rating": 4.5,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:40:26.365000Z",
+      "shades": [
+        "Cream Orange"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 10,
+    "fields": {
+      "name": "Blush Cream",
+      "slug": "blush-cream",
+      "description": "A delicate blush pink with warm undertones.\r\nPerfect for office makeup and casual outings.",
+      "price": "350.00",
+      "category": 1,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/pinkyish_BHh5FJ6.webp",
+      "rating": 5.0,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:42:01.800000Z",
+      "shades": [
+        "Blush Cream"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 11,
+    "fields": {
+      "name": "Cocoa Touch",
+      "slug": "cocoa-touch",
+      "description": "A warm brown with rich undertones.\r\nComplements all skin tones with effortless style.",
+      "price": "299.00",
+      "category": 2,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/blush4_6JEQ6jP.webp",
+      "rating": 4.6,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:44:03.100000Z",
+      "shades": [
+        "Cocoa Touch"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 12,
+    "fields": {
+      "name": "Pink",
+      "slug": "pink",
+      "description": "A soft nude shade that enhances natural beauty.\r\nPerfect for everyday elegance and minimal makeup.",
+      "price": "250.00",
+      "category": 2,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/nudei.jpg",
+      "rating": 4.7,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-07T16:45:34.188000Z",
+      "shades": [
+        "Pink"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 13,
+    "fields": {
+      "name": "Brown",
+      "slug": "brown",
+      "description": "A warm, earthy shade that gives a natural, sculpted look. Perfect for everyday wear and deeper skin tones.",
+      "price": "200.00",
+      "category": 2,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/blush1.jpg",
+      "rating": 4.5,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-08T06:17:42.922000Z",
+      "shades": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 14,
+    "fields": {
+      "name": "Rosy Petal",
+      "slug": "rosy-petal",
+      "description": "A gentle pink blush that brightens the face naturally. Creates a fresh and radiant look.",
+      "price": "240.00",
+      "category": 2,
+      "image": "https://cosmico-backend-arun.onrender.com/media/products/rose_o9rIg2d.jfif",
+      "rating": 5.0,
+      "stock": 10,
+      "is_featured": true,
+      "is_trending": true,
+      "created_at": "2026-01-08T06:20:08.057000Z",
+      "shades": [
+        "Rosy Petal"
+      ]
+    }
+  }
+]
