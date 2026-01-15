@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://cosmico-backend-arun.onrender.com',
+  baseURL: 'https://cosmico-backend-arun.onrender.com/api',
 });
 
 api.interceptors.request.use((config) => {
