@@ -47,7 +47,7 @@ const TrendingSection = () => {
         const fetchTrending = async () => {
             try {
                 const response = await api.get('products/trending/');
-                setProducts(response.data.slice(0, 8)); // Limit to 8 items
+                setProducts(response.data.slice(0, 32)); // Show all trending items
             } catch (error) {
                 console.error("Failed to fetch trending", error);
             } finally {
