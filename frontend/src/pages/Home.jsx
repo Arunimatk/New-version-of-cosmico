@@ -39,39 +39,41 @@ const CategoryCard = ({ title, img, link }) => (
     </Link>
 );
 
-
-
-{/* Categories */ }
-<section className="py-20 px-4 max-w-7xl mx-auto">
-    <h2 className="text-4xl font-serif text-center mb-16">The Collection</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-        <CategoryCard
-            title="Lipstick"
-            link="/shop/lipstick"
-            img={lip1}
-        />
-        <CategoryCard
-            title="Foundation"
-            link="/shop/foundation"
-            img={found5}
-        />
-        <CategoryCard
-            title="Perfume"
-            link="/shop/perfume"
-            img={PERFUME}
-        />
-        <CategoryCard
-            title="Blush"
-            link="/shop/blush"
-            img={BLUSH}
-        />
-        <CategoryCard
-            title="Nailpolish"
-            link="/shop/Nailpolish"
-            img={NAILPOLISH}
-        />
-    </div>
-</section>
+const Home = () => {
+    return (
+        <div className="w-full">
+            <Hero />
+            {/* Categories */}
+            <section className="py-20 px-4 max-w-7xl mx-auto">
+                <h2 className="text-4xl font-serif text-center mb-16">The Collection</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <CategoryCard
+                        title="Lipstick"
+                        link="/shop/lipstick"
+                        img={lip1}
+                    />
+                    <CategoryCard
+                        title="Foundation"
+                        link="/shop/foundation"
+                        img={found5}
+                    />
+                    <CategoryCard
+                        title="Perfume"
+                        link="/shop/perfume"
+                        img={PERFUME}
+                    />
+                    <CategoryCard
+                        title="Blush"
+                        link="/shop/blush"
+                        img={BLUSH}
+                    />
+                    <CategoryCard
+                        title="Nailpolish"
+                        link="/shop/Nailpolish"
+                        img={NAILPOLISH}
+                    />
+                </div>
+            </section>
         </div >
     );
 };
