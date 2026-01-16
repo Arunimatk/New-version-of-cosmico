@@ -134,7 +134,7 @@ def populate_products(request):
 
 # ----- Products -----
 class ProductViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Product.objects.all()
+    queryset = Product.objects.all().order_by('-id')
     serializer_class = ProductSerializer
     
     @action(detail=False)
