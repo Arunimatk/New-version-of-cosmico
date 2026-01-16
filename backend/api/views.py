@@ -144,7 +144,9 @@ class ProductViewSet(viewsets.ReadOnlyModelViewSet):
 
     @action(detail=False)
     def trending(self, request):
-        serializer = self.get_serializer(self.queryset.filter(is_trending=True), many=True)
+        # Simply return the latest 50 products to ensure visibility for all new items
+        # independent of the 'is_trending' flag which might be stale.
+        serializer = self.get_serializer(self.queryset[:50], many=True)
         return Response(serializer.data)
 
 # ----- Categories -----
