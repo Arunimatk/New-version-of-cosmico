@@ -43,7 +43,7 @@ const TrendingSection = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
+    useEffect(() => { // Fetch trending products for home page
         const fetchTrending = async () => {
             try {
                 const response = await api.get(`products/trending/?t=${Date.now()}`);
