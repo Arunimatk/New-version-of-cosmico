@@ -46,8 +46,8 @@ const TrendingSection = () => {
     useEffect(() => {
         const fetchTrending = async () => {
             try {
-                const response = await api.get('products/trending/');
-                setProducts(response.data.slice(0, 32)); // Show all trending items
+                const response = await api.get(`products/trending/?t=${Date.now()}`);
+                setProducts(response.data); // Show ALL items without limit
             } catch (error) {
                 console.error("Failed to fetch trending", error);
             } finally {
