@@ -39,95 +39,40 @@ const CategoryCard = ({ title, img, link }) => (
     </Link>
 );
 
-const TrendingSection = () => {
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
 
-    useEffect(() => { // Fetch trending products for home page
-        const fetchTrending = async () => {
-            try {
-                // Use the main products endpoint which is confirmed to work on the Shop page
-                const response = await api.get(`products/?t=${Date.now()}`);
-                setProducts(response.data.slice(0, 50)); // Display latest 50 items
-            } catch (error) {
-                console.error("Failed to fetch trending", error);
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchTrending();
-    }, []);
 
-    if (loading) return <div className="py-20 text-center">Loading...</div>;
-
-    return (
-        <section className="py-20 px-4 max-w-7xl mx-auto bg-white/50">
-            <h2 className="text-4xl font-serif text-center mb-12">New Arrivals</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-                {products.map(product => (
-                    <Link key={product.id} to={`/product/${product.id}`} className="group block">
-                        <div className="relative h-80 overflow-hidden mb-4 bg-gray-100">
-                            <img
-                                src={product.image || "https://placehold.co/400x600?text=Cosmico"}
-                                alt={product.name}
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all" />
-                        </div>
-                        <h3 className="text-lg font-serif mb-1 group-hover:text-accent transition-colors">{product.name}</h3>
-                        <p className="text-secondary font-medium">${product.price}</p>
-                    </Link>
-                ))}
-            </div>
-            <div className="text-center">
-                <Link to="/shop" className="inline-block px-8 py-3 border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 tracking-widest text-sm font-semibold uppercase">
-                    View All Collection
-                </Link>
-            </div>
-        </section >
-    );
-};
-
-const Home = () => {
-    return (
-        <div className="w-full">
-            <Hero />
-
-            {/* Trending Section - Added for visibility */}
-            <TrendingSection />
-
-            {/* Categories */}
-            <section className="py-20 px-4 max-w-7xl mx-auto">
-                <h2 className="text-4xl font-serif text-center mb-16">The Collection</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                    <CategoryCard
-                        title="Lipstick"
-                        link="/shop/lipstick"
-                        img={lip1}
-                    />
-                    <CategoryCard
-                        title="Foundation"
-                        link="/shop/foundation"
-                        img={found5}
-                    />
-                    <CategoryCard
-                        title="Perfume"
-                        link="/shop/perfume"
-                        img={PERFUME}
-                    />
-                    <CategoryCard
-                        title="Blush"
-                        link="/shop/blush"
-                        img={BLUSH}
-                    />
-                    <CategoryCard
-                        title="Nailpolish"
-                        link="/shop/Nailpolish"
-                        img={NAILPOLISH}
-                    />
-                </div>
-            </section>
-        </div>
+{/* Categories */ }
+<section className="py-20 px-4 max-w-7xl mx-auto">
+    <h2 className="text-4xl font-serif text-center mb-16">The Collection</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+        <CategoryCard
+            title="Lipstick"
+            link="/shop/lipstick"
+            img={lip1}
+        />
+        <CategoryCard
+            title="Foundation"
+            link="/shop/foundation"
+            img={found5}
+        />
+        <CategoryCard
+            title="Perfume"
+            link="/shop/perfume"
+            img={PERFUME}
+        />
+        <CategoryCard
+            title="Blush"
+            link="/shop/blush"
+            img={BLUSH}
+        />
+        <CategoryCard
+            title="Nailpolish"
+            link="/shop/Nailpolish"
+            img={NAILPOLISH}
+        />
+    </div>
+</section>
+        </div >
     );
 };
 
