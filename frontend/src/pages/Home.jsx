@@ -61,9 +61,9 @@ const TrendingSection = () => {
 
     return (
         <section className="py-20 px-4 max-w-7xl mx-auto bg-white/50">
-            <h2 className="text-4xl font-serif text-center mb-12">Trending Now</h2>
+            <h2 className="text-4xl font-serif text-center mb-12">Latest Arrivals</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                {products.map(product => (
+                {products.slice(0, 50).map(product => (
                     <Link key={product.id} to={`/product/${product.id}`} className="group block">
                         <div className="relative h-80 overflow-hidden mb-4 bg-gray-100">
                             <img
