@@ -60,6 +60,7 @@ const TrendingSection = () => {
     if (loading) return <div className="py-20 text-center">Loading...</div>;
 
     return (
+        <section className="py-20 px-4 max-w-7xl mx-auto bg-white/50">
             <h2 className="text-4xl font-serif text-center mb-12">New Arrivals</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
                 {products.map(product => (
@@ -78,7 +79,7 @@ const TrendingSection = () => {
                 ))}
             </div>
             <div className="text-center">
-                 <Link to="/shop" className="inline-block px-8 py-3 border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 tracking-widest text-sm font-semibold uppercase">
+                <Link to="/shop" className="inline-block px-8 py-3 border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 tracking-widest text-sm font-semibold uppercase">
                     View All Collection
                 </Link>
             </div>
