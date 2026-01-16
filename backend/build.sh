@@ -6,5 +6,5 @@ pip install -r requirements.txt
 
 python manage.py collectstatic --no-input
 python manage.py migrate
-python manage.py loaddata data.json
+# python manage.py loaddata data.json # Removed to prevent overwriting manual data
 python create_new_superuser.py
