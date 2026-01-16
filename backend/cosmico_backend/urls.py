@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
+from api.views import populate_products
 from django.conf import settings
 from django.conf.urls.static import static
 from django.http import HttpResponse, JsonResponse
@@ -19,4 +20,5 @@ urlpatterns = [
     path('check/', check_view),
     path('', root_view),
     path('health/', health_view),
+    path('populate-products/', populate_products),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -11,6 +11,8 @@ const Shop = () => {
 
 
 
+    const [loading, setLoading] = useState(true);
+
     const handleAddToCart = async (productId, action = 'cart') => {
         try {
             await api.post('cart/add/', { product_id: productId, quantity: 1 });
@@ -52,6 +54,7 @@ const Shop = () => {
 
     useEffect(() => {
         const fetchProducts = async () => {
+            setLoading(true);
             try {
                 const response = await api.get('products/');
                 let data = response.data;
@@ -62,6 +65,8 @@ const Shop = () => {
                 setProducts(data);
             } catch (error) {
                 console.error("Failed to fetch products", error);
+            } finally {
+                setLoading(false);
             }
         };
         fetchProducts();
@@ -71,7 +76,11 @@ const Shop = () => {
         <div className="pt-24 px-4 max-w-7xl mx-auto min-h-screen">
             <h2 className="text-4xl font-serif text-center mb-10 capitalize">{category || "All Products"}</h2>
 
-            {products.length === 0 ? (
+            {loading ? (
+                <div className="flex justify-center items-center h-64">
+                    <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-accent"></div>
+                </div>
+            ) : products.length === 0 ? (
                 <div className="text-center text-gray-500 text-xl mt-10">
                     <p>No products found in this category.</p>
                     <p className="text-sm mt-2">Try adding products via the Admin Panel.</p>
