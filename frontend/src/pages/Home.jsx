@@ -39,10 +39,56 @@ const CategoryCard = ({ title, img, link }) => (
     </Link>
 );
 
+const TrendingSection = () => {
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchTrending = async () => {
+            try {
+                const response = await api.get('products/trending/');
+                setProducts(response.data.slice(0, 8)); // Limit to 8 items
+            } catch (error) {
+                console.error("Failed to fetch trending", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchTrending();
+    }, []);
+
+    if (loading) return <div className="py-20 text-center">Loading...</div>;
+
+    return (
+        <section className="py-20 px-4 max-w-7xl mx-auto bg-white/50">
+            <h2 className="text-4xl font-serif text-center mb-12">Trending Now</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                {products.map(product => (
+                    <Link key={product.id} to={`/product/${product.id}`} className="group block">
+                        <div className="relative h-80 overflow-hidden mb-4 bg-gray-100">
+                            <img
+                                src={product.image || "https://placehold.co/400x600?text=Cosmico"}
+                                alt={product.name}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all" />
+                        </div>
+                        <h3 className="text-lg font-serif mb-1 group-hover:text-accent transition-colors">{product.name}</h3>
+                        <p className="text-secondary font-medium">${product.price}</p>
+                    </Link>
+                ))}
+            </div>
+        </section>
+    );
+};
+
 const Home = () => {
     return (
         <div className="w-full">
             <Hero />
+
+            {/* Trending Section - Added for visibility */}
+            <TrendingSection />
 
             {/* Categories */}
             <section className="py-20 px-4 max-w-7xl mx-auto">
