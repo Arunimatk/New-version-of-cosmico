@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # exit on error
 set -o errexit
+# Rebuild trigger for verification
 
 pip install -r requirements.txt
 
