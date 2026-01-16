@@ -46,8 +46,9 @@ const TrendingSection = () => {
     useEffect(() => { // Fetch trending products for home page
         const fetchTrending = async () => {
             try {
-                const response = await api.get(`products/trending/?t=${Date.now()}`);
-                setProducts(response.data); // Show ALL items without limit
+                // Use the main products endpoint which is confirmed to work on the Shop page
+                const response = await api.get(`products/?t=${Date.now()}`);
+                setProducts(response.data.slice(0, 50)); // Display latest 50 items
             } catch (error) {
                 console.error("Failed to fetch trending", error);
             } finally {
