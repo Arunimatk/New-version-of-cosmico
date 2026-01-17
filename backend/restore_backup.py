@@ -39,11 +39,26 @@ def restore_products():
         updated_count = 0
         created_count = 0
 
-        for p_data in products_data:
+        for idx, p_data in enumerate(products_data):
+            print(f"Processing item {idx}: Type={type(p_data)}")
+            if not isinstance(p_data, dict):
+                 print(f"SKIPPING item {idx}: Not a dict. Value: {p_data}")
+                 continue
+
             # Get or create category
-            cat_name = p_data.get('category_name') or (p_data.get('category') and p_data['category'].get('name')) or "Uncategorized"
+            # Handle cases where 'category' is an ID (int) or an object (dict)
+            cat_name = p_data.get('category_name') 
+            if not cat_name and isinstance(p_data.get('category'), dict):
+                cat_name = p_data['category'].get('name')
+            if not cat_name:
+                cat_name = "Uncategorized"
+
             # Try to get slug from data, otherwise slugify name
-            cat_slug = p_data.get('category_slug') or (p_data.get('category') and p_data['category'].get('slug')) or cat_name.lower().replace(" ", "-")
+            cat_slug = p_data.get('category_slug')
+            if not cat_slug and isinstance(p_data.get('category'), dict):
+                cat_slug = p_data['category'].get('slug')
+            if not cat_slug:
+                 cat_slug = cat_name.lower().replace(" ", "-")
             
             category, _ = Category.objects.get_or_create(
                 slug=cat_slug, 
