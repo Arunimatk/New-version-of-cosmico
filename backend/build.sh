@@ -7,5 +7,8 @@ pip install -r requirements.txt
 
 python manage.py collectstatic --no-input
 python manage.py migrate
-# python manage.py loaddata data.json # Removed to prevent overwriting manual data
+python manage.py loaddata data.json
+python add_perfumes.py
+python add_nail_polish.py
 python create_new_superuser.py
+python restore_backup.py
